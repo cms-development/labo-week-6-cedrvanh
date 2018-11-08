@@ -39,5 +39,4 @@ export class LoginComponent implements OnInit {
   goBack() {
     this.location.back();
   }
-
 }

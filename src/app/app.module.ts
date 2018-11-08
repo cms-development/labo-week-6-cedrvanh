@@ -9,6 +9,7 @@ import { CourseListComponent } from './components/courses/course-list/course-lis
 import { InstructorListComponent } from './components/instructors/instructor-list/instructor-list.component';
 import { StudentListComponent } from './components/students/student-list/student-list.component';
 import { LoginComponent } from './core/login/login.component';
+import { CourseCreateComponent } from './components/courses/course-create/course-create.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './core/login/login.component';
     CourseListComponent,
     InstructorListComponent,
     StudentListComponent,
-    LoginComponent
+    LoginComponent,
+    CourseCreateComponent,
   ],
   imports: [
     BrowserModule,

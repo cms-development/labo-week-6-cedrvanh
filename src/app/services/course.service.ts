@@ -7,6 +7,12 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class CourseService {
+  options = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    }
+  };
 
   constructor() { }
 
@@ -15,5 +21,9 @@ export class CourseService {
       .then(res => {
         return res.data;
       });
+  }
+
+  createCourse(data) {
+    return axios.post(`${environment.api.url}${environment.api.endPoints.course}`, data, this.options);
   }
 }
