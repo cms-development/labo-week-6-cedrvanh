@@ -1,5 +1,30 @@
-<div *ngFor="let course of courses">
-  <hr>
-  <h2>Naam: {{ course.attributes.name }}</h2>
-  <b>School: {{ course.attributes.field_academic_institution }}</b>
+<div class="header is-clearfix">
+  <h1 class="title is-pulled-left">Courses</h1>
+  <a class="button is-primary is-pulled-right">Add Course</a>
 </div>
+<div class="is-divider"></div>
+<table class="table is-fullwidth is-striped">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Institution</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.attributes.name }}</td>
+      <td>{{ course.attributes.field_academic_institution }}</td>
+      <td>{{ course.attributes.created }}</td>
+      <td>{{ course.attributes.changed }}</td>
+      <td>
+        <span class="icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </span>
+        <span class="icon">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

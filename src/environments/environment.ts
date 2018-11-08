@@ -5,11 +5,12 @@
 export const environment = {
   production: false,
   api: {
-    url: 'http://localhost:80/jsonapi',
+    url: 'http://localhost:80/',
     endPoints: {
-      course: '/course/course',
-      instructor: '/instructor/instructor',
-      student: '/student/student',
+      course: 'jsonapi/course/course',
+      instructor: 'jsonapi/instructor/instructor',
+      student: 'jsonapi/student/student',
+      auth: 'oauth/token'
     }
   }
 };

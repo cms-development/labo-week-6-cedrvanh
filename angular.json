@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/scss/main.scss",
-              "node_modules/bulma/css/bulma.css"
+              "node_modules/bulma/css/bulma.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },
@@ -78,7 +79,8 @@
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/scss/main.scss",
-              "node_modules/bulma/css/bulma.css"
+              "node_modules/bulma/css/bulma.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": [],
             "assets": [

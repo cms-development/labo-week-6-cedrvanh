@@ -9,7 +9,7 @@ import axios from 'axios';
   styleUrls: ['./course-list.component.scss']
 })
 export class CourseListComponent implements OnInit {
-  courses: {};
+  courses: object;
 
   constructor(private courseService: CourseService) { }
 
@@ -20,6 +20,7 @@ export class CourseListComponent implements OnInit {
   getCourses(): void {
     this.courseService.getCourses()
     .then(res => {
+      console.log(res);
       this.courses = res.data;
     });
   }
