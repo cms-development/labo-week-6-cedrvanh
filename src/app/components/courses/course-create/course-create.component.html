@@ -1,0 +1,44 @@
+<div class="header is-clearfix">
+  <h1 class="title is-pulled-left">Add a new course</h1>
+</div>
+<div class="is-divider"></div>
+
+<div class="form">
+  <div class="field">
+    <label class="label">Course Name</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Enter the name of the course" [(ngModel)]="name" required>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Course Institution</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Enter the insutition of the course" [(ngModel)]="institution" required>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Course Instructor</label>
+    <div class="control">
+      <div class="select">
+        <select>
+          <option>Philippe De Pauw</option>
+          <option>Frederick Roegiers</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Course Students</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Add a new line for each student" rows="10"></textarea>
+    </div>
+  </div>
+  <div class="field is-grouped is-pulled-right">
+    <p class="control">
+      <a class="button is-primary" (click)="onCreateCourse()">Add Course</a>
+    </p>
+    <p class="control">
+      <a class="button is-light">Cancel</a>
+    </p>
+  </div>
+</div>
