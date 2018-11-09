@@ -1,0 +1,30 @@
+<div class="header is-clearfix">
+  <h1 class="title is-pulled-left">Students</h1>
+  <a class="button is-primary is-pulled-right" routerLink="/students/add">Add Student</a>
+</div>
+<div class="is-divider"></div>
+<table class="table is-fullwidth is-striped" *ngIf="students">
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>First Name</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let student of students">
+      <td>{{ student.attributes.name }}</td>
+      <td>{{ student.attributes.field_first_name }}</td>
+      <td>{{ student.attributes.created }}</td>
+      <td>{{ student.attributes.changed }}</td>
+      <td>
+        <span class="icon">
+          <i class="fa fa-pencil" aria-hidden="true" routerLink="/students/{{ student.id }}/edit"></i>
+        </span>
+        <span class="icon">
+          <i class="fa fa-trash" aria-hidden="true" id="{{ student.id }}" (click)="deleteStudent($event)"></i>
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

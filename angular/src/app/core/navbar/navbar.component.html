@@ -1,0 +1,32 @@
+<nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a routerLink="/home" class="navbar-item">
+        Home
+      </a>
+      <a routerLink="/courses" class="navbar-item">
+        Courses
+      </a>
+      <a routerLink="/instructors" class="navbar-item">
+        Instructors
+      </a>
+      <a routerLink="/students" class="navbar-item">
+        Students
+      </a>
+      <a routerLink="/login" class="navbar-item" *ngIf="!isAuthenticated">
+        Login
+      </a>
+      <a class="navbar-item" (click)="onLogOut()" *ngIf="isAuthenticated">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav>

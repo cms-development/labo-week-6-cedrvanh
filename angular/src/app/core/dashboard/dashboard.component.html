@@ -1,0 +1,44 @@
+<div class="header is-clearfix">
+  <h1 class="title is-pulled-left">CMSDEV - Labo 6</h1>
+</div>
+<div class="is-divider"></div>
+
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical" *ngIf="courses">
+        <article class="tile is-child notification is-primary">
+          <div class="content">
+            <p class="title">Courses</p>
+            <p class="subtitle">Amount of courses: {{ courses.length }}</p>
+            <div class="content">
+              <a routerLink="/courses" class="button is-light">View all courses</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-link" *ngIf="instructors">
+          <div class="content">
+            <p class="title">Instructors</p>
+            <p class="subtitle">Amount of instructors: {{ instructors.length }}</p>
+            <div class="content">
+              <a routerLink="/instructors" class="button is-light">View all instructors</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child notification is-danger" *ngIf="students">
+      <div class="content">
+        <p class="title">Students</p>
+        <p class="subtitle">Amount of students: {{ students.length }}</p>
+        <div class="content">
+          <a routerLink="/students" class="button is-light">View all students</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

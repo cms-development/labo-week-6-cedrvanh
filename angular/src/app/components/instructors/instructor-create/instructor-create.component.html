@@ -1,0 +1,58 @@
+<div class="header is-clearfix">
+    <h1 class="title is-pulled-left">Add a new Instructor</h1>
+  </div>
+  <div class="is-divider"></div>
+  
+  <div class="form">
+    <div class="field">
+      <label class="label">Instructor Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Enter the name of the instructor" [(ngModel)]="name" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Instructor First Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Enter the first name of the instructor" [(ngModel)]="firstName" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Instructor Academic Rank</label>
+      <div class="control">
+        <div class="select">
+          <select>
+            <option>Visiting Professor</option>
+            <option>Assistant Lecturer</option>
+            <option>Senior Assistant Lecturer</option>
+            <option>Lecturer</option>
+            <option>Senior Lecturer</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Instructor Academic Title</label>
+      <div class="control">
+        <div class="select">
+          <select>
+            <option>A.D.</option>
+            <option>B.</option>
+            <option>B.A.</option>
+            <option>B.Sc.</option>
+            <option>M.</option>
+            <option>M.A.</option>
+            <option>M.Sc.</option>
+            <option>Ph.D.</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="field is-grouped is-pulled-right">
+      <p class="control">
+        <a class="button is-primary" (click)="onCreateInstructor()">Add Instructor</a>
+      </p>
+      <p class="control">
+        <a class="button is-light">Cancel</a>
+      </p>
+    </div>
+  </div>
