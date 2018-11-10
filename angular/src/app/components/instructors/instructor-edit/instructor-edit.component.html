@@ -1,37 +1,51 @@
 <div class="field">
-    <label class="label">Instructor First Name</label>
-    <div class="control">
-      <input class="input" type="text" placeholder="Enter the first name of the instructor" [(ngModel)]="firstName" required>
+  <label class="label">Instructor Full Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Enter the first name of the instructor" [(ngModel)]="instructor.attributes.name" required>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Instructor First Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Enter the first name of the instructor" [(ngModel)]="instructor.attributes.field_first_name" required>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Instructor Academic Rank</label>
+  <div class="control">
+    <div class="select">
+      <select>
+        <option>Visiting Professor</option>
+        <option>Assistant Lecturer</option>
+        <option>Senior Assistant Lecturer</option>
+        <option>Lecturer</option>
+        <option>Senior Lecturer</option>
+      </select>
     </div>
   </div>
-  <div class="field">
-    <label class="label">Instructor Academic Rank</label>
-    <div class="control">
-      <div class="select">
-        <select>
-          <option>Visiting Professor</option>
-          <option>Assistant Lecturer</option>
-          <option>Senior Assistant Lecturer</option>
-          <option>Lecturer</option>
-          <option>Senior Lecturer</option>
-        </select>
-      </div>
+</div>
+<div class="field">
+  <label class="label">Instructor Academic Title</label>
+  <div class="control">
+    <div class="select">
+      <select>
+        <option>A.D.</option>
+        <option>B.</option>
+        <option>B.A.</option>
+        <option>B.Sc.</option>
+        <option>M.</option>
+        <option>M.A.</option>
+        <option>M.Sc.</option>
+        <option>Ph.D.</option>
+      </select>
     </div>
   </div>
-  <div class="field">
-    <label class="label">Instructor Academic Title</label>
-    <div class="control">
-      <div class="select">
-        <select>
-          <option>A.D.</option>
-          <option>B.</option>
-          <option>B.A.</option>
-          <option>B.Sc.</option>
-          <option>M.</option>
-          <option>M.A.</option>
-          <option>M.Sc.</option>
-          <option>Ph.D.</option>
-        </select>
-      </div>
-    </div>
+</div>
+<div class="field is-grouped is-pulled-right">
+  <p class="control">
+    <a class="button is-primary" (click)="onEditInstructor()">Update Instructor</a>
+  </p>
+  <p class="control">
+    <a class="button is-light" (click)="goBack()">Cancel</a>
+  </p>
 </div>

@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       .then(user => {
         console.log(user);
         this.helperService.setTokens(user.data);
-        this.router.navigate(['courses']);
+        this.router.navigate(['/home']);
       });
   }
 

@@ -27,8 +27,8 @@
 </div>
 <div class="field">
   <label class="label">Course Students</label>
-  <div class="control">
-    <textarea class="textarea" placeholder="Add a new line for each student" rows="10"></textarea>
+  <div class="control" *ngFor="let student of students">
+    <input type="checkbox"> {{ student.attributes.name }}
   </div>
 </div>
 <div class="field is-grouped is-pulled-right">

@@ -32,9 +32,10 @@ export class CourseListComponent implements OnInit {
 
   deleteCourse(event: any) {
     this.id = event.target.id;
+    console.log(this.id);
     this.courseService.deleteCourse(this.id)
       .then(res => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
       });
   }
 }

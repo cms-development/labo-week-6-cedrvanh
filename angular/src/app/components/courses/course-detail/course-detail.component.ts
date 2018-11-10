@@ -10,6 +10,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class CourseDetailComponent implements OnInit {
   id: string;
   course: any;
+  students: any;
+  instructors: any;
+
   constructor(
     private courseService: CourseService,
     private route: ActivatedRoute

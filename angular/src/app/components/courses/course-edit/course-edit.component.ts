@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CourseService } from '../../../services/course.service';
 import { Location } from '@angular/common';
 import { InstructorService } from '../../../services/instructor.service';
+import { StudentService } from '../../../services/student.service';
 
 @Component({
   selector: 'app-course-edit',
@@ -13,11 +14,13 @@ export class CourseEditComponent implements OnInit {
   course: any;
   id: string;
   instructors: any;
+  students: any;
   selectedInstructor: any;
-
+  selectedStudent: any;
   constructor(
     private courseService: CourseService,
     private instructorService: InstructorService,
+    private studentService: StudentService,
     private route: ActivatedRoute,
     private router: Router,
     private location: Location
@@ -27,12 +30,20 @@ export class CourseEditComponent implements OnInit {
     this.id = this.route.snapshot.paramMap.get('id');
     this.getCourseById(this.id);
     this.getInstructors();
+    this.getStudents();
   }
 
   getInstructors() {
     this.instructorService.getInstructors()
       .then(res => {
         this.instructors = res.data;
+      });
+  }
+
+  getStudents() {
+    this.studentService.getStudents()
+      .then(res => {
+        this.students = res.data;
       });
   }
 

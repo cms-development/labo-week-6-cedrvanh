@@ -16,6 +16,9 @@ import { InstructorEditComponent } from './components/instructors/instructor-edi
 import { StudentCreateComponent } from './components/students/student-create/student-create.component';
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { CourseDetailComponent } from './components/courses/course-detail/course-detail.component';
+import { InstructorDetailComponent } from './components/instructors/instructor-detail/instructor-detail.component';
+import { StudentDetailComponent } from './components/students/student-detail/student-detail.component';
+import { StudentEditComponent } from './components/students/student-edit/student-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { CourseDetailComponent } from './components/courses/course-detail/course
     StudentCreateComponent,
     DashboardComponent,
     CourseDetailComponent,
+    InstructorDetailComponent,
+    StudentDetailComponent,
+    StudentEditComponent
   ],
   imports: [
     BrowserModule,

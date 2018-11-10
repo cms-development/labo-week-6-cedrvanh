@@ -13,7 +13,7 @@
         <th>Actions</th>
       </tr>
       <tr *ngFor="let instructor of instructors">
-        <td>{{ instructor.attributes.name }}</td>
+        <td><a routerLink="/instructors/{{ instructor.id }}">{{ instructor.attributes.name }}</a></td>
         <td>{{ instructor.attributes.field_first_name }}</td>
         <td>{{ instructor.attributes.created }}</td>
         <td>{{ instructor.attributes.changed }}</td>

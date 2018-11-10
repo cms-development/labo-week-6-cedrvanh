@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../../../services/student.service';
 import { Router } from '@angular/router';
+import { CourseService } from '../../../services/course.service';
 
 @Component({
   selector: 'app-student-create',
@@ -10,13 +11,23 @@ import { Router } from '@angular/router';
 export class StudentCreateComponent implements OnInit {
   name: string;
   firstName: string;
+  courses: any;
 
   constructor(
     private studentService: StudentService,
+    private courseService: CourseService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.getCourses();
+  }
+
+  getCourses() {
+    this.courseService.getCourses()
+      .then(res => {
+        this.courses = res.data;
+      });
   }
 
   onCreateStudent() {
@@ -32,7 +43,7 @@ export class StudentCreateComponent implements OnInit {
 
     this.studentService.createStudent(data)
       .then(res => {
-        this.router.navigate(['/courses']);
+        this.router.navigate(['/students']);
       });
   }
 }

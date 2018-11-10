@@ -31,7 +31,7 @@ export class InstructorListComponent implements OnInit {
     this.id = event.target.id;
     this.instructorService.deleteInstructor(this.id)
       .then(res => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
       });
   }
 }

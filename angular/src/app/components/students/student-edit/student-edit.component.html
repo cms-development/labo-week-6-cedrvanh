@@ -1,0 +1,26 @@
+<div class="field">
+  <label class="label">Student Full Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Enter the first name of the student" [(ngModel)]="student.attributes.name" required>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Student First Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Enter the first name of the student" [(ngModel)]="student.attributes.field_first_name" required>
+  </div>
+</div>
+<div class="field">
+  <label class="label">Select courses</label>
+  <div class="control" *ngFor="let course of courses">
+    <input type="checkbox"> {{ course.attributes.name }}
+  </div>
+</div>
+<div class="field is-grouped is-pulled-right">
+  <p class="control">
+    <a class="button is-primary" (click)="onEditStudent()">Update Student</a>
+  </p>
+  <p class="control">
+    <a class="button is-light" (click)="goBack()">Cancel</a>
+  </p>
+</div>

@@ -17,20 +17,9 @@
     </div>
   </div>
   <div class="field">
-    <label class="label">Student Instructor</label>
-    <div class="control">
-      <div class="select">
-        <select>
-          <option>Philippe De Pauw</option>
-          <option>Frederick Roegiers</option>
-        </select>
-      </div>
-    </div>
-  </div>
-  <div class="field">
-    <label class="label">Course Students</label>
-    <div class="control">
-      <textarea class="textarea" placeholder="Add a new line for each student" rows="10"></textarea>
+    <label class="label">Courses</label>
+    <div class="control" *ngFor="let course of courses">
+      <input type="checkbox"> {{ course.attributes.name }}
     </div>
   </div>
   <div class="field is-grouped is-pulled-right">

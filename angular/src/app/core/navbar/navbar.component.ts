@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -20,8 +21,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onLogOut() {
-    this.authService.logout().then(res => {
-      this.router.navigate(['/home']);
-    });
+    this.authService.logout();
+    window.location.reload();
   }
 }
